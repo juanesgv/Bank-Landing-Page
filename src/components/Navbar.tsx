@@ -30,7 +30,7 @@ const Navbar = () => {
 
     return (
         <nav className="flex justify-between items-center py-6 bg-white shadow-md w-full px-32 z-20 fixed top-0 left-0 right-0">
-            <img src="/logo.svg" alt="Imagen" />
+            <img src="/logo.svg" alt="Logo" />
             <ul className="flex space-x-10">
                 {
                     optionsMenu.map(option => (
@@ -38,7 +38,7 @@ const Navbar = () => {
                     ))
                 }
             </ul>
-            <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-4 py-2 rounded-full font-PublicSans">Request Invite</button>
+            <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans">Request Invite</button>
         </nav>
     )
 }
