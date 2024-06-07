@@ -1,15 +1,44 @@
 const Navbar = () => {
+
+    const optionsMenu = [
+        {
+            id: 1,
+            name: 'Home',
+            link : '#home',
+        },
+        {
+            id: 2,
+            name: 'About',
+            link : '#about',
+        },
+        {
+            id: 3,
+            name: 'Contact',
+            link : '#contact',
+        },
+        {
+            id: 4,
+            name: 'Blog',
+            link : '#blog',
+        },
+        {
+            id: 5,
+            name: 'Careers',
+            link : '#careers',
+        },
+    ]
+
     return (
         <nav className="flex justify-between items-center py-6 bg-white shadow-md w-full px-32 z-20 fixed top-0 left-0 right-0">
-            <div className="text-2xl font-bold">Easybank</div>
-            <ul className="flex space-x-4">
-                <li><a href="#home" className="text-gray-600">Home</a></li>
-                <li><a href="#about" className="text-gray-600">About</a></li>
-                <li><a href="#contact" className="text-gray-600">Contact</a></li>
-                <li><a href="#blog" className="text-gray-600">Blog</a></li>
-                <li><a href="#careers" className="text-gray-600">Careers</a></li>
+            <img src="/logo.svg" alt="Imagen" />
+            <ul className="flex space-x-10">
+                {
+                    optionsMenu.map(option => (
+                        <li key={option.id}><a href={option.link} className="text-Grayish-Blue font-PublicSans hover:text-Dark-Blue">{option.name}</a></li>
+                    ))
+                }
             </ul>
-            <button className="bg-green-500 text-white px-4 py-2 rounded-full">Request Invite</button>
+            <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-4 py-2 rounded-full font-PublicSans">Request Invite</button>
         </nav>
     )
 }
