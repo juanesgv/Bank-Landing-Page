@@ -5,3 +5,11 @@ export interface Article {
     content:string ,
     image: string
 }
+
+export interface InfoChoose {
+    id: number,
+    image: string,
+    title: string,
+    caption: string
+}
+
