@@ -38,9 +38,10 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center bg-white shadow-sm w-full px-32 z-20 fixed top-0 left-0 right-0 h-24">
+        <nav className="flex justify-between items-center bg-white shadow-sm w-full px-8 lg:px-32 z-20 fixed top-0 left-0 right-0 h-24">
+
             <img src="/logo.svg" alt="Logo" />
-            <ul className="flex space-x-10 items-center h-full">
+            <ul className="hidden md:flex space-x-10 items-center h-full">
                 {
                     optionsMenu.map(option => (
                         <li key={option.id} className="h-full flex items-center">
@@ -55,7 +56,11 @@ const Navbar = () => {
                     ))
                 }
             </ul>
-            <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans">Request Invite</button>
+            <button className="hidden md:block bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans">Request Invite</button>
+
+            <button className="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11"><g fill="#2D314D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/></g></svg>
+            </button>
         </nav>
     )
 }
