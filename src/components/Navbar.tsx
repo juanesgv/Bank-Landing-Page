@@ -1,40 +1,57 @@
+import { useState } from 'react'
+import '../styles.css'
+
 const Navbar = () => {
 
     const optionsMenu = [
         {
             id: 1,
             name: 'Home',
-            link : '#home',
+            link: '#home',
         },
         {
             id: 2,
             name: 'About',
-            link : '#about',
+            link: '#about',
         },
         {
             id: 3,
             name: 'Contact',
-            link : '#contact',
+            link: '#contact',
         },
         {
             id: 4,
             name: 'Blog',
-            link : '#blog',
+            link: '#blog',
         },
         {
             id: 5,
             name: 'Careers',
-            link : '#careers',
+            link: '#careers',
         },
     ]
 
+    const [optionMenu, setOptionMenu] = useState<number>(1)
+
+    const handleClick = (id:number) => {
+        setOptionMenu(id)
+    }
+
     return (
-        <nav className="flex justify-between items-center py-6 bg-white shadow-md w-full px-32 z-20 fixed top-0 left-0 right-0">
+        <nav className="flex justify-between items-center bg-white shadow-sm w-full px-32 z-20 fixed top-0 left-0 right-0 h-24">
             <img src="/logo.svg" alt="Logo" />
-            <ul className="flex space-x-10">
+            <ul className="flex space-x-10 items-center h-full">
                 {
                     optionsMenu.map(option => (
-                        <li key={option.id}><a href={option.link} className="text-Grayish-Blue font-PublicSans hover:text-Dark-Blue">{option.name}</a></li>
+                        <li key={option.id} className="h-full flex items-center">
+                            <a 
+                                href={option.link} 
+                                className={`${option.id === optionMenu ? 'border-Lime-Green text-Dark-Blue' : 'text-Grayish-Blue'} h-full flex items-center justify-center  font-PublicSans border-b-2 border-transparent hover:border-Lime-Green hover:text-Dark-Blue transition duration-300 ease-in-out`}
+                                onClick={() => handleClick(option.id)}
+                            >
+                                {option.name}
+                            </a>
+                        </li>
                     ))
                 }
             </ul>
