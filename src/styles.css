@@ -63,7 +63,7 @@
 /* xs: less than 768px */
 @media (min-width: 640px) and (max-width: 768px) {
     .bg-header {
-        background: url('/public/bg-intro-mobile.svg'); /* Cambia el fondo aquí */
+        background: url('/bg-intro-mobile.svg'); /* Cambia el fondo aquí */
         background-size: cover;
         background-position: 0px -300px !important;
         background-repeat: no-repeat;
@@ -71,7 +71,7 @@
 }
 @media (max-width: 639px) {
     .bg-header {
-        background: url('/public/bg-intro-mobile.svg'); /* Cambia el fondo aquí */
+        background: url('/bg-intro-mobile.svg'); /* Cambia el fondo aquí */
         background-size: cover;
         background-position: 0px -50px !important;
         background-repeat: no-repeat;
