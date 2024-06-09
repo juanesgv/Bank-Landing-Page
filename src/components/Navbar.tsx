@@ -38,7 +38,7 @@ const Navbar = () => {
                     }
                 </ul>
 
-                <button className="hidden md:block bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans">Request Invite</button>
+                <button className="hidden md:block bg-gradient-to-r from-Lime-Green to-Bright-Cyan hover:opacity-65 text-white px-8 py-3 rounded-full font-PublicSans">Request Invite</button>
 
                 <button className="md:hidden focus:outline-none" onClick={handleMenu}>
                     {isMenuOpen?

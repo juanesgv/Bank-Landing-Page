@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col items-center">
-                <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans md:self-end mb-4">Request Invite</button>
+                <button className="bg-gradient-to-r from-Lime-Green to-Bright-Cyan text-white px-8 py-3 rounded-full font-PublicSans md:self-end mb-4 hover:opacity-65">Request Invite</button>
                 <p className="text-sm font-PublicSans font-normal text-Grayish-Blue">© Easybank. All Rights Reserved</p>
             </div>
         </footer>
