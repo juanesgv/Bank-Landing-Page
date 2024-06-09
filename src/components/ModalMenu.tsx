@@ -12,7 +12,7 @@ const ModalMenu = ({isOpen, onClose, optionsMenu, optionSelected, handleClick}:M
     if(!isOpen) return null
 
     return (
-        <div className=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 -mt-96">
+        <div className=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 -mt-64">
             <div className="bg-white w-[90%] max-w-md p-6 rounded-lg shadow-lg">
                 <ul className="flex flex-col space-y-4">
                     {optionsMenu.map(option => (
