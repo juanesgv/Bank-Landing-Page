@@ -13,3 +13,9 @@ export interface InfoChoose {
     caption: string
 }
 
+export interface OptionMenu {
+    id: number,
+    name: string,
+    link:  string,
+}
+
